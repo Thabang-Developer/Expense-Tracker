@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background: linear-gradient(white, rgba(64, 152, 192, 0.788));
+}
+
+.expense-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expense-section .expense-container {
+    width: 60%;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: -4px 10px 13px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -4px 10px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 10px 13px 0px rgba(0,0,0,0.75);
+}
+.expense-container .exp-content {
+    position: relative;
+}
+.expense-container .exp-content .add-expense {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.expense-container .exp-content .add-expense p {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(62, 167, 161);
+    margin: 10px 0;
+}
+.expense-container .exp-content .add-expense p::after {
+    content: '*';
+    color: red;
+    font-size: 15px;
+}
+.expense-container .add-expense input {
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    background-color: whitesmoke;
+}
+.expense-container .add-expense input::placeholder {
+    font-family: 600;
+}
+.expense-container .add-expense input:focus {
+    border: 2px solid rgba(64, 152, 192, 0.788);
+}
+.expense-container .add-expense button {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    padding: 8px;
+    margin: 15px 0;
+    border-radius: 50%;
+    font-weight: 600;
+    background-color: rgba(64, 152, 192, 0.788);
+    box-shadow: -4px 10px 13px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -4px 10px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 10px 13px 0px rgba(0,0,0,0.75);
+    transition: .5s;
+}
+.expense-container .add-expense button:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.expense-container .add-expense button.update-expense {
+    display: none;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(251, 255, 0, 0.767);
+}
+.expense-container .add-expense button.submit-expense {
+    display: block;
+}
+
+/* border line */
+.expense-container .border {
+    height: 3px;
+    border-radius: 20px;
+    margin: 0 10px;
+    background: linear-gradient(to right, rgb(145, 218, 205), rgba(64, 152, 192, 0.788));
+}
+
+.expense-container .expense-list {
+    margin: 20px 0 0;
+}
+.expense-container .expense-list p {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(62, 167, 161);
+    margin: 10px 0;
+}
+.expense-container .expense-list button.del-data {
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    outline: 0;
+    background-color: red;
+    border-radius: 10px;
+    transition: .4s;
+    margin: 10px 0;
+}
+.expense-container .expense-list button.del-data:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    color: black;
+}
+.expense-container .expense-list table {
+    width: 100%;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.expense-container .expense-list table th {
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(90, 90, 90);
+}
+.expense-container .expense-list table td {
+    text-align: left;
+    padding: 8px 0;
+    border-bottom: 1px solid grey;
+    font-weight: bold;
+    color: rgb(155, 155, 155);
+}
+
+.expense-container .expense-list table td button {
+    padding: 8px;
+    border: 0;
+    outline: 0;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .3s;
+}
+.expense-container .expense-list table td button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.expense-container .expense-list table td button.edit-exp {
+    color: rgb(209, 212, 3);
+}
+.expense-container .expense-list table td button.del-exp {
+    color: rgb(245, 40, 13);
+}

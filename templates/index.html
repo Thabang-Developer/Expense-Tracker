@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Expense Tracker | CodeAlpha</title>
+</head>
+<body>
+    <section class="expense-section">
+        <div class="expense-container">
+           <div class="exp-content">
+                <div class="add-expense">
+                    <p>Expanse Tracker:</p>
+                    <input type="text" placeholder="Enter item name..." id="exp-name">
+                    <input type="number" placeholder="Enter item amount..." id="amount">
+                    <button class="submit-expense" onclick="addNewExpense()">Add</button>
+                    <button class="update-expense">Update</button>
+                </div>
+                <div class="border"></div>
+                <div class="expense-list">
+                    <p>Expense List:</p>
+                    <button class="del-data">Clear</button>
+                    <div class="table-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#:</th>
+                                    <th>ITEM:</th>
+                                    <th>AMOUNT:</th>
+                                    <th>OPTIONS:</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbl-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/991fa081b6.js" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
